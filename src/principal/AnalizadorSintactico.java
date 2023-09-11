@@ -173,7 +173,7 @@ public class AnalizadorSintactico {
                 }else {
                     indError.mostrarError(20, alex.getCadena());
                 }           
-            }catch (IOException){
+            }catch (IOException e ){
                 indError.mostrarError(21, alex.getCadena());
             }
         }            
