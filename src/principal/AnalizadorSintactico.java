@@ -79,7 +79,7 @@ public class AnalizadorSintactico {
             if(alex.getSimbolo()==Terminal.PUNTO_Y_COMA){
                 alex.escanear();
             }else{
-                indError.mostrarError(5, alex.getCadena());
+                indError.mostrarError(6, alex.getCadena());
             }
         }
         if (alex.getSimbolo() == Terminal.VAR) {
@@ -100,7 +100,7 @@ public class AnalizadorSintactico {
             if(alex.getSimbolo()==Terminal.PUNTO_Y_COMA){
                 alex.escanear();
             }else{
-                indError.mostrarError(5, alex.getCadena());
+                indError.mostrarError(6, alex.getCadena());
             }            
         }
         while (alex.getSimbolo() == Terminal.PROCEDURE) {
@@ -113,13 +113,13 @@ public class AnalizadorSintactico {
             if(alex.getSimbolo()==Terminal.PUNTO_Y_COMA){
                 alex.escanear();
             }else{
-                indError.mostrarError(5, alex.getCadena());
+                indError.mostrarError(6, alex.getCadena());
             }
             bloque();
             if(alex.getSimbolo()==Terminal.PUNTO_Y_COMA){
                 alex.escanear();
             }else{
-                indError.mostrarError(5, alex.getCadena());
+                indError.mostrarError(6, alex.getCadena());
             }            
         }
         proposicion();
@@ -141,8 +141,13 @@ public class AnalizadorSintactico {
                 break;    
             case WHILE:
                 break;
-            
-        }
+            case READLN:
+                break;
+            case WRITELN:
+                break;
+            case WRITE:
+                break;
+            }
     }
 
     private void expresion() {
