@@ -41,6 +41,9 @@ public class IndicadorError {
             case 8:
                 System.out.println("");
                 break;
+            // errores creados por santiago
+            case 20:
+                System.out.println(" se esperaba un Expresion pero se encontro" + cadena);
             
         }
         System.exit(0);
