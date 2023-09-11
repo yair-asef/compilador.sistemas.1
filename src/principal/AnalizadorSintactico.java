@@ -65,7 +65,7 @@ public class AnalizadorSintactico {
                 }else{
                     indError.mostrarError(3, alex.getCadena());
                 }            
-                if(alex.getSimbolo()==Terminal.IGUAL){
+                if(alex.getSimbolo()==Terminal.IGUAL){  
                     alex.escanear();
                 }else{
                     indError.mostrarError(4, alex.getCadena());
@@ -153,5 +153,30 @@ public class AnalizadorSintactico {
     private void expresion() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-
+    
+    private void factor() throws IOException {
+        if (alex.getSimbolo()== Terminal.IDENTIFICADOR){
+            alex.escanear();
+        }
+        if (alex.getSimbolo()== Terminal.NUMERO){
+            alex.escanear();
+        }
+        if (alex.getSimbolo()== Terminal.APERTURA_PARENTESIS){
+            //esta bien usado la funcion expresion? si existe un error tendria q salir de la funcion expresion??
+            // o tendria que existir un indicador de error que me informe que hay un error en la EXPRESION            
+            alex.escanear();
+            try {
+                expresion();
+                alex.escanear();
+                if(alex.getSimbolo()== Terminal.CIERRE_PARENTESIS){
+                    alex.escanear();
+                }else {
+                    indError.mostrarError(20, alex.getCadena());
+                }           
+            }catch (IOException e ){
+                indError.mostrarError(21, alex.getCadena());
+            }
+        }            
+    }               
 }
+

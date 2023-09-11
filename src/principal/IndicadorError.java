@@ -41,7 +41,12 @@ public class IndicadorError {
             case 8:
                 System.out.println("");
                 break;
+            // errores creados por santiago
+            case 20:
+                System.out.println(" se esperaba un PARENTESIS DE CIERRE pero se encontro" + cadena);
             
+            case 21:
+                System.out.println("hay un error en la expresion ");
         }
         System.exit(0);
     }
