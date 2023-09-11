@@ -33,7 +33,7 @@ public class IndicadorError {
                 System.out.println("Se esperaba un NUMERO y se encontró " + cadena);
                 break;
             case 6:
-                System.out.println("Se esperaba una COMA y se encontró " + cadena);
+                System.out.println("" + cadena);
                 break;
             case 7:
                 System.out.println("");
