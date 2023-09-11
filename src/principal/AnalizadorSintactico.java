@@ -163,23 +163,20 @@ public class AnalizadorSintactico {
         }
         if (alex.getSimbolo()== Terminal.APERTURA_PARENTESIS){
             //esta bien usado la funcion expresion? si existe un error tendria q salir de la funcion expresion??
-            // o tendria que existir un indicador de error que me informe que hay un error en la EXPRESION
-            
+            // o tendria que existir un indicador de error que me informe que hay un error en la EXPRESION            
             alex.escanear();
             try {
                 expresion();
-            } catch( Exception e){
-                System.out.println("error");;
-            }
-            alex.escanear();
-            if(alex.getSimbolo()== Terminal.CIERRE_PARENTESIS){
                 alex.escanear();
-            }else {
-                indError.mostrarError(20, alex.getCadena());
-            }           
-         }            
-    }
-        
-        
-    }
+                if(alex.getSimbolo()== Terminal.CIERRE_PARENTESIS){
+                    alex.escanear();
+                }else {
+                    indError.mostrarError(20, alex.getCadena());
+                }           
+            }catch (IOException){
+                indError.mostrarError(21, alex.getCadena());
+            }
+        }            
+    }               
+}
 
