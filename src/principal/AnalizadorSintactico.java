@@ -65,7 +65,7 @@ public class AnalizadorSintactico {
                 }else{
                     indError.mostrarError(3, alex.getCadena());
                 }            
-                if(alex.getSimbolo()==Terminal.IGUAL){
+                if(alex.getSimbolo()==Terminal.IGUAL){  
                     alex.escanear();
                 }else{
                     indError.mostrarError(4, alex.getCadena());
