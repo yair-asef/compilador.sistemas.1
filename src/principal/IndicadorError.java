@@ -36,12 +36,41 @@ public class IndicadorError {
                 System.out.println("Se esperaba un PUNTO_Y_COMA y se encontró " + cadena);
                 break;
             case 7:
-                System.out.println("");
+                System.out.println("Se esperaba ASIGNACION_DE_VARIABLE y se encontró " + cadena);
                 break;
             case 8:
-                System.out.println("");
+                System.out.println("Se esperaba END y se encontró " + cadena);
                 break;
-            
+            case 9:
+                System.out.println("Se esperaba THEN y se encontró " + cadena);
+                break;
+            case 10:
+                System.out.println("Se esperaba DO y se encontró " + cadena);
+                break;
+            case 11:
+                System.out.println("Se esperaba APERTURA_PARENTESIS y se encontró " + cadena);
+                break;
+            case 12:
+                System.out.println("Se esperaba CIERRE_PARENTESIS y se encontró " + cadena);
+                break;
+            case 13:
+                System.out.println("Se esperaba un identificador y se encontró " + cadena);
+                break;
+            case 14:
+                System.out.println("Se esperaba un IGUAL y se encontró " + cadena);
+                break;
+            case 15:
+                System.out.println("Se esperaba un NUMERO y se encontró " + cadena);
+                break;
+            case 16:
+                System.out.println("Se esperaba un PUNTO_Y_COMA y se encontró " + cadena);
+                break;
+            case 17:
+                System.out.println("Se esperaba ASIGNACION_DE_VARIABLE y se encontró " + cadena);
+                break;
+            case 18:
+                System.out.println("Se esperaba END y se encontró " + cadena);
+                break;
         }
         System.exit(0);
     }
